@@ -137,8 +137,10 @@ class Level_One extends Phaser.Scene{
     initializeGame(){
         let my = this.my;
 
+        // re-init variables for replayability
         this.waitingForWave = false;
         this.playerScore = 0;
+        this.waveCounter = 0;
 
         // create sounds
         this.sounds = {
