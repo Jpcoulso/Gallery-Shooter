@@ -138,6 +138,7 @@ class Level_One extends Phaser.Scene{
         let my = this.my;
 
         this.waitingForWave = false;
+        this.playerScore = 0;
 
         // create sounds
         this.sounds = {
