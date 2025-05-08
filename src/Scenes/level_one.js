@@ -13,7 +13,6 @@ class Level_One extends Phaser.Scene{
         this.playerX = 500;
         this.playerY = 950;
         this.waitingForWave = false;
-
         this.enemyPositions = [
             [250, 20], [350, 20], [450, 20], [550, 20], [650, 20], [750, 20],
                         [350, 70], [450, 70], [550, 70], [650, 70],
@@ -102,6 +101,7 @@ class Level_One extends Phaser.Scene{
 
         // stop engine background noise
         this.sounds.engine.stop();
+        this.waitingForWave = false;
         
         // Clear all sprites safely
         const destroyAll = (arr) => {
@@ -136,6 +136,9 @@ class Level_One extends Phaser.Scene{
 
     initializeGame(){
         let my = this.my;
+
+        this.waitingForWave = false;
+
         // create sounds
         this.sounds = {
             shoot: this.sound.add("playerBullet"),
